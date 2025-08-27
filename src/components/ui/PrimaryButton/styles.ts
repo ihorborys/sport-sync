@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     },
     btnText: {
         color: COLORS.white,
+        fontFamily: 'Inter',
         fontSize: 13,
         fontWeight: 600,
     },
