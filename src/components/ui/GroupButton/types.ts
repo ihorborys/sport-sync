@@ -1,4 +1,4 @@
-export interface IPrimaryButtonProps {
+export interface IGroupButtonProps {
     title: string;
     onPress: () => void;
 }

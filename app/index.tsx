@@ -8,7 +8,7 @@ export default function Index() {
     return (
         <View style={styles.container}>
             <SectionTitle title={"Your Groups"}></SectionTitle>
-            <GroupButton></GroupButton>
+            <GroupButton title={"Group 2015 A"} onPress={() => console.log('Pressed')}></GroupButton>
             <Input></Input>
             <PrimaryButton title={"Next"} onPress={() => console.log('Pressed')}></PrimaryButton>
         </View>
@@ -18,8 +18,9 @@ export default function Index() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "center",
+        // justifyContent: "center",
         alignItems: "center",
         paddingHorizontal: 24,
+        marginTop: 50,
     },
 });
