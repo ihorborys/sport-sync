@@ -11,9 +11,8 @@ export const styles = StyleSheet.create({
         borderRadius: 12,
     },
     btnText: {
+        fontFamily: "Inter",
         color: COLORS.white,
-        // fontFamily: 'Inter',
         fontSize: 13,
-        // fontWeight: 600,
     },
 })
