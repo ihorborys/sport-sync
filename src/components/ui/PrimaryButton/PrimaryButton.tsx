@@ -1,7 +1,8 @@
 import React from "react";
 import {TouchableOpacity, Text} from "react-native";
-import {IPrimaryButtonProps} from "./types";
+
 import {styles} from "./styles";
+import {IPrimaryButtonProps} from "./types";
 
 
 const PrimaryButton = ({title, onPress}: IPrimaryButtonProps) => {

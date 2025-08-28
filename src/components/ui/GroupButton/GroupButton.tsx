@@ -1,7 +1,8 @@
 import React from 'react';
 import {Text, TouchableOpacity} from 'react-native';
-import {IGroupButtonProps} from "./types";
+
 import {styles} from "./styles";
+import {IGroupButtonProps} from "./types";
 
 function GroupButton({title, onPress}: IGroupButtonProps) {
     return (

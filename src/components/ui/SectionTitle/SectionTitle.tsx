@@ -1,7 +1,8 @@
 import React from 'react';
 import {Text} from 'react-native';
-import {SectionTitleProps} from "./types";
+
 import {styles} from "./styles";
+import {SectionTitleProps} from "./types";
 
 
 const SectionTitle = ({title, style}: SectionTitleProps) => {

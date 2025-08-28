@@ -1,9 +1,10 @@
 import {StyleSheet, Text, View} from "react-native";
-import PrimaryButton from "@/src/components/ui/PrimaryButton/PrimaryButton";
-import Input from "@/src/components/ui/Input/Input";
-import SectionTitle from "@/src/components/ui/SectionTitle/SectionTitle";
+
 import GroupButton from "@/src/components/ui/GroupButton/GroupButton";
-import Logo from "@/src/components/ui/Logo/Logo";
+import Input from "@/src/components/ui/Input/Input";
+import Logo from "@components/ui/Logo/Logo";
+import PrimaryButton from "@/src/components/ui/PrimaryButton/PrimaryButton";
+import SectionTitle from "@/src/components/ui/SectionTitle/SectionTitle";
 
 export default function Index() {
     return (
