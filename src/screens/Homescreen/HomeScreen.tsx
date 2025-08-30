@@ -5,11 +5,10 @@ import Logo from "@components/ui/Logo/Logo";
 import {styles} from "./styles";
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import SectionSubtitle from "@components/ui/SectionSubtitle/SectionSubtitle";
-import {RootStackParamList} from "@/src/types/RootStackParamList";
-import {NativeStackNavigationProp} from "@react-navigation/native-stack";
+import {HomeScreenNavigationProp} from "@/src/screens/Homescreen/types";
 
 const HomeScreen = () => {
-    const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+    const navigation = useNavigation<HomeScreenNavigationProp>();
 
 
     return (
