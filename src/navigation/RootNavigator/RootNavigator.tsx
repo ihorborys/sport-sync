@@ -1,14 +1,15 @@
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import HomeScreen from "@/src/screens/HomeScreen";
-import DetailsScreen from "@/src/screens/DetailsScreen";
+import HomeScreen from "@/src/screens/Homescreen/HomeScreen";
+import RolesScreen from "@/src/screens/RolesScreen";
+import {RootStackParamList} from "@/src/types/RootStackParamList";
 
-const RootStack = createNativeStackNavigator();
+const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 const RootNavigator = () => {
     return (
         <RootStack.Navigator>
             <RootStack.Screen name="Home" component={HomeScreen}/>
-            <RootStack.Screen name="Details" component={DetailsScreen}/>
+            <RootStack.Screen name="Roles" component={RolesScreen}/>
         </RootStack.Navigator>
     );
 }

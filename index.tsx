@@ -10,7 +10,7 @@ registerRootComponent(App);
 // import Input from "@components/ui/Input/Input";
 // import Logo from "@components/ui/Logo/Logo";
 // import PrimaryButton from "@components/ui/PrimaryButton/PrimaryButton";
-// import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
+// import SectionSubtitle from "@components/ui/SectionSubtitle/SectionSubtitle";
 // import ScrollView = Animated.ScrollView;
 // import fallback from "napi-postinstall/fallback";
 // import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
@@ -37,7 +37,7 @@ registerRootComponent(App);
 //                 <Logo width={"100"} height={"118"}></Logo>
 //             </ScrollView>
 //
-//             <SectionTitle title={"Your Groups"}></SectionTitle>
+//             <SectionSubtitle title={"Your Groups"}></SectionSubtitle>
 //             <GroupButton title={"Group 2015 A"} onPress={() => Alert.alert(`You selected Group 2015 A`)}></GroupButton>
 //             <Input></Input>
 //             <PrimaryButton title={"Next"} onPress={() => console.log('Pressed')}></PrimaryButton>
