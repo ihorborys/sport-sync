@@ -1,16 +1,18 @@
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import HomeScreen from "@/src/screens/Homescreen/HomeScreen";
-import RolesScreen from "@/src/screens/RolesScreen";
+import HomeScreen from "@/src/screens/HomeScreen/HomeScreen";
+import RolesScreen from "@/src/screens/RolesScreen/RolesScreen";
 import {RootStackParamList} from "@/src/types/RootStackParamList";
+import {stackHeaderStyles} from "@/src/navigation/RootNavigator/styles";
+import {SCREENS} from "@/src/constants/screens";
 
-const RootStack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const RootNavigator = () => {
     return (
-        <RootStack.Navigator>
-            <RootStack.Screen name="Home" component={HomeScreen}/>
-            <RootStack.Screen name="Roles" component={RolesScreen}/>
-        </RootStack.Navigator>
+        <Stack.Navigator screenOptions={stackHeaderStyles}>
+            <Stack.Screen name={SCREENS.HOME} component={HomeScreen} options={{title: ""}}/>
+            <Stack.Screen name={SCREENS.ROLES} component={RolesScreen} options={{title: ""}}/>
+        </Stack.Navigator>
     );
 }
 

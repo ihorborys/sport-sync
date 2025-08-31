@@ -18,8 +18,8 @@ registerRootComponent(App);
 //
 // export default function Index() {
 //     return (
-//         <View style={styles.container}>
-//             <ScrollView style={styles.scrollViewContainer}
+//         <View style={styles.ts.container}>
+//             <ScrollView style={styles.ts.scrollViewContainer}
 //                         showsVerticalScrollIndicator={false}>
 //                 <Logo width={"200"} height={"236"}></Logo>
 //                 <Logo width={"200"} height={"236"}></Logo>
@@ -28,7 +28,7 @@ registerRootComponent(App);
 //                 <Logo width={"200"} height={"236"}></Logo>
 //             </ScrollView>
 //
-//             <ScrollView style={styles.scrollViewContainer} horizontal
+//             <ScrollView style={styles.ts.scrollViewContainer} horizontal
 //                         showsHorizontalScrollIndicator={false}>
 //                 <Logo width={"100"} height={"118"}></Logo>
 //                 <Logo width={"100"} height={"118"}></Logo>
@@ -60,7 +60,7 @@ registerRootComponent(App);
 //
 // // export default AppTabs;
 //
-// const styles = StyleSheet.create({
+// const styles.ts = StyleSheet.create({
 //     container: {
 //         flex: 1,
 //         alignItems: "center",
