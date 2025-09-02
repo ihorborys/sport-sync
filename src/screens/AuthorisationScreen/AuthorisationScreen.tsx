@@ -8,6 +8,7 @@ import {styles} from "./styles";
 import React from "react";
 import Input from "@components/ui/Input/Input";
 import PressableText from "@components/ui/PressableText/PressableText";
+import BaseText from "@components/BaseText/BaseText";
 
 const AuthorisationScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
@@ -16,24 +17,36 @@ const AuthorisationScreen = () => {
         <SafeAreaView style={styles.safeAreaView}>
             <View style={styles.container}>
                 <Logo width={"100"} height={"118"}></Logo>
-                <View style={styles.titleContainer}>
+                <View style={styles.inputSection}>
                     <SectionTitle
                         title={"Welcome!"}
                         style={styles.title}
                     ></SectionTitle>
+                    <Input style={styles.input} placeholder={"Email Address"}></Input>
+                    <Input style={styles.input} placeholder={"Password"}></Input>
+                    <PressableText
+                        text="Forgot password?"
+                        onPress={() => Alert.alert("Forgot password functionality")}
+                        containerStyle={{width: "100%"}}
+                    />
                 </View>
-                <Input style={styles.input} placeholder={"Email Address"}></Input>
-                <Input style={styles.input} placeholder={"Password"}></Input>
-                <PressableText
-                    text="Forgot password?"
-                    onPress={() => Alert.alert("Forgot Password Functionality")}
-                    // textStyle={{fontWeight: "500"}}
-                />
-
                 <PrimaryButton
                     title={"Login"}
                     onPress={() => navigation.navigate("Roles")}
                 ></PrimaryButton>
+                <View style={styles.socialsSection}>
+
+                    <View style={styles.registerText}>
+                        <BaseText>Not a member?</BaseText>
+                        <PressableText
+                            text="Register now"
+                            onPress={() => Alert.alert("Register now Functionality")}
+                            containerStyle={{paddingLeft: 10}}
+                        />
+                    </View>
+
+
+                </View>
             </View>
         </SafeAreaView>
     );

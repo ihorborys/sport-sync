@@ -14,12 +14,24 @@ export const styles = StyleSheet.create({
         backgroundColor: COLORS.background,
 
     },
-    titleContainer: {
+    inputSection: {
         flex: 1,
+        width: "100%",
         alignItems: "center",
         justifyContent: "center",
     },
     title: {},
     input: {},
-    forgot: {}
+    forgot: {},
+    socialsSection: {
+        width: "100%",
+        alignItems: "center",
+        paddingVertical: 16,
+    },
+    registerText: {
+        width: "100%",
+        flexDirection: "row",
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
 });

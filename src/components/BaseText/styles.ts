@@ -2,13 +2,12 @@ import {StyleSheet} from "react-native";
 import {COLORS} from "@/src/constants/colors";
 
 export const styles = StyleSheet.create({
-    container: {},
     text: {
-        color: COLORS.primary,
+        fontFamily: 'Inter',
         fontSize: 13,
-        fontWeight: 600,
-    },
-    pressed: {
-        opacity: 0.6,
+        fontWeight: "400",
+        color: COLORS.greyDark,
+        lineHeight: 16,
+        letterSpacing: 0.01,
     },
 });
