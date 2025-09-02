@@ -1,5 +1,6 @@
 export const SCREENS = {
     HOME: 'Home',
+    AUTHORISATION: 'Authorisation',
     ROLES: 'Roles',
 } as const;
 

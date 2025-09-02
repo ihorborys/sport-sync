@@ -4,12 +4,12 @@ import {COLORS} from "@/src/constants/colors";
 export const styles = StyleSheet.create({
     safeAreaView: {
         flex: 1,
-        paddingHorizontal: 24,
-        paddingVertical: 96,
         backgroundColor: COLORS.background,
     },
     container: {
         flex: 1,
+        paddingHorizontal: 24,
+        paddingVertical: 96,
         alignItems: "center",
         backgroundColor: COLORS.background,
 

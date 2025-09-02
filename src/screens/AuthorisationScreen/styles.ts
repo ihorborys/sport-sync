@@ -18,8 +18,8 @@ export const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        gap: 12,
     },
     title: {},
-    subTitle: {}
+    input: {},
+    forgot: {}
 });
