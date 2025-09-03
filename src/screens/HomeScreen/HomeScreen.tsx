@@ -21,7 +21,7 @@ const HomeScreen = () => {
                         title={"SportSync is a smart app for organizing sports teams, training sessions, and events across any sport."}
                         style={styles.subTitle}></SectionSubtitle>
                 </View>
-                <PrimaryButton title={"Next"} onPress={() => navigation.navigate("Authorisation")}></PrimaryButton>
+                <PrimaryButton title={"Next"} onPress={() => navigation.navigate("Auth")}></PrimaryButton>
             </View>
         </SafeAreaView>
     );

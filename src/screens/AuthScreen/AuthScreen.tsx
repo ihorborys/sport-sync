@@ -10,7 +10,7 @@ import Input from "@components/ui/Input/Input";
 import PressableText from "@components/ui/PressableText/PressableText";
 import BaseText from "@components/BaseText/BaseText";
 
-const AuthorisationScreen = () => {
+const AuthScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
 
     return (
@@ -52,4 +52,4 @@ const AuthorisationScreen = () => {
     );
 };
 
-export default AuthorisationScreen;
+export default AuthScreen;

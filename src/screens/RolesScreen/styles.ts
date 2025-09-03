@@ -21,5 +21,27 @@ export const styles = StyleSheet.create({
         gap: 12,
     },
     title: {},
-    subTitle: {}
+    subTitle: {},
+    buttonsContainer: {
+        width: "100%",
+        flexDirection: "row",
+        alignItems: "center",
+        // justifyContent: "center",
+        // borderWidth: 1.5,
+        // borderColor: "red",
+        gap: 8,
+    },
+    btnStyle: {
+        width: "35%",
+        backgroundColor: COLORS.white,
+        borderWidth: 1.5,
+        borderColor: COLORS.primary,
+    },
+    btnTextStyle: {
+        color: COLORS.primary,
+        fontSize: 17,
+        fontWeight: 600,
+        textAlign: "center",
+        textTransform: "uppercase",
+    }
 });

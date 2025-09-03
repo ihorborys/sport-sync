@@ -19,6 +19,7 @@ export const styles = StyleSheet.create({
         width: "100%",
         alignItems: "center",
         justifyContent: "center",
+        gap: 16,
     },
     title: {},
     input: {},

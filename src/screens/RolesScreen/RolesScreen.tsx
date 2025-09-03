@@ -26,7 +26,23 @@ const RolesScreen = () => {
                         }
                         style={styles.subTitle}
                     ></SectionSubtitle>
+                    <View style={styles.buttonsContainer}>
+                        <PrimaryButton
+                            buttonStyle={styles.btnStyle}
+                            textStyle={styles.btnTextStyle}
+                            title={"coach"}
+                            onPress={() => navigation.navigate("Roles")
+                            }
+                        ></PrimaryButton>
+                        <PrimaryButton
+                            buttonStyle={styles.btnStyle}
+                            textStyle={styles.btnTextStyle}
+                            title={"athlete"}
+                            onPress={() => navigation.navigate("Roles")}
+                        ></PrimaryButton>
+                    </View>
                 </View>
+
                 <PrimaryButton
                     title={"Next"}
                     onPress={() => navigation.navigate("Roles")}
