@@ -27,3 +27,4 @@
 This project is licensed under the [MIT License](LICENSE).
 
 ![screenshot_components.jpeg](assets%2Fimages%2Fscreenshot_components.jpeg)
+![screenshot_tab_navigation.jpeg](assets%2Fimages%2Fscreenshot_tab_navigation.jpeg)
