@@ -4,12 +4,12 @@ import PrimaryButton from "@components/ui/PrimaryButton/PrimaryButton";
 import Logo from "@components/ui/Logo/Logo";
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import SectionSubtitle from "@components/ui/SectionSubtitle/SectionSubtitle";
-import {HomeScreenNavigationProp} from "@/src/screens/HomeScreen/types";
 import {styles} from "./styles";
 import React from "react";
+import {RolesScreenNavigationProp} from "@/src/screens/RolesScreen/types";
 
 const RolesScreen = () => {
-    const navigation = useNavigation<HomeScreenNavigationProp>();
+    const navigation = useNavigation<RolesScreenNavigationProp>();
 
     return (
         <SafeAreaView style={styles.safeAreaView}>
@@ -31,24 +31,17 @@ const RolesScreen = () => {
                             buttonStyle={styles.btnStyle}
                             textStyle={styles.btnTextStyle}
                             title={"coach"}
-                            onPress={() => navigation.navigate("Roles")
+                            onPress={() => navigation.navigate("CoachesTabs", {userId: "1"})
                             }
                         ></PrimaryButton>
                         <PrimaryButton
                             buttonStyle={styles.btnStyle}
                             textStyle={styles.btnTextStyle}
                             title={"athlete"}
-                            onPress={() => navigation.navigate("Roles")}
+                            onPress={() => navigation.navigate("AthleteTabs", {userId: "2"})}
                         ></PrimaryButton>
                     </View>
-
                 </View>
-
-                {/*<PrimaryButton*/}
-                {/*    title={"Next"}*/}
-                {/*    onPress={() => navigation.navigate("Roles")}*/}
-                {/*></PrimaryButton>*/}
-
             </View>
         </SafeAreaView>
 

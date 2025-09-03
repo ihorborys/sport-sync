@@ -1,6 +1,12 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "jsx": "react-jsx",
+    // або "react-native" для RN
+    "types": [
+      "react",
+      "react-native"
+    ],
     "strict": true,
     "baseUrl": ".",
     "paths": {

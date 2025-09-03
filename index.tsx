@@ -14,7 +14,7 @@ registerRootComponent(App);
 // import ScrollView = Animated.ScrollView;
 // import fallback from "napi-postinstall/fallback";
 // import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-// import HomeScreen from "@/src/screens/HomeScreen";
+// import IntroScreen from "@/src/screens/IntroScreen";
 //
 // export default function Index() {
 //     return (
@@ -50,7 +50,7 @@ registerRootComponent(App);
 // // export const AppTabs = () => {
 // //     return (
 // //         <Tab.Navigator>
-// //             <Tab.Screen name="Home" component={HomeScreen}/>
+// //             <Tab.Screen name="Home" component={IntroScreen}/>
 // //             {/*<Tab.Screen name="Search" component={SearchScreen}/>*/}
 // //             {/*<Tab.Screen name="Notifications" component={NotificationsScreen}/>*/}
 // //             {/*<Tab.Screen name="Profile" component={ProfileScreen}/>*/}

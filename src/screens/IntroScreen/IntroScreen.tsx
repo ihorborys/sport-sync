@@ -4,11 +4,11 @@ import PrimaryButton from "@components/ui/PrimaryButton/PrimaryButton";
 import Logo from "@components/ui/Logo/Logo";
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import SectionSubtitle from "@components/ui/SectionSubtitle/SectionSubtitle";
-import {HomeScreenNavigationProp} from "@/src/screens/HomeScreen/types";
+import {IntroScreenNavigationProp} from "@/src/screens/IntroScreen/types";
 import {styles} from "./styles";
 
-const HomeScreen = () => {
-    const navigation = useNavigation<HomeScreenNavigationProp>();
+const IntroScreen = () => {
+    const navigation = useNavigation<IntroScreenNavigationProp>();
 
 
     return (
@@ -27,4 +27,4 @@ const HomeScreen = () => {
     );
 }
 
-export default HomeScreen;
+export default IntroScreen;

@@ -3,7 +3,7 @@ import {useNavigation} from "@react-navigation/native";
 import PrimaryButton from "@components/ui/PrimaryButton/PrimaryButton";
 import Logo from "@components/ui/Logo/Logo";
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
-import {HomeScreenNavigationProp} from "@/src/screens/HomeScreen/types";
+import {HomeScreenNavigationProp} from "@/src/screens/IntroScreen/types";
 import {styles} from "./styles";
 import React from "react";
 import Input from "@components/ui/Input/Input";

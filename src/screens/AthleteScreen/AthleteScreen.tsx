@@ -1,20 +1,20 @@
 import {SafeAreaView, View} from "react-native";
 import Logo from "@components/ui/Logo/Logo";
-import {styles} from "./styles";
 import React from "react";
 import BaseText from "@components/ui/BaseText/BaseText";
+import {styles} from "./styles";
 
-const CoachScreen = () => {
-    // const navigation = useNavigation<CoachScreenNavigationProp>();
+const AthleteScreen = () => {
+    // const navigation = useNavigation<AtleteScreenNavigationProp>();
 
     return (
         <SafeAreaView style={styles.safeAreaView}>
             <View style={styles.container}>
                 <Logo width={"100"} height={"118"}></Logo>
-                <BaseText>CoachScreen</BaseText>
+                <BaseText>AthleteScreen</BaseText>
             </View>
         </SafeAreaView>
     );
 };
 
-export default CoachScreen;
+export default AthleteScreen;

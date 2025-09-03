@@ -1,4 +1,4 @@
 // import {NativeStackNavigationProp} from "@react-navigation/native-stack";
 // import {RootStackParamList} from "@/src/types/RootStackParamList";
 //
-// export type CoachScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, "Coach">;
+// export type AtleteScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, "Athlete">;
