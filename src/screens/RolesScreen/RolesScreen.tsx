@@ -41,14 +41,17 @@ const RolesScreen = () => {
                             onPress={() => navigation.navigate("Roles")}
                         ></PrimaryButton>
                     </View>
+
                 </View>
 
-                <PrimaryButton
-                    title={"Next"}
-                    onPress={() => navigation.navigate("Roles")}
-                ></PrimaryButton>
+                {/*<PrimaryButton*/}
+                {/*    title={"Next"}*/}
+                {/*    onPress={() => navigation.navigate("Roles")}*/}
+                {/*></PrimaryButton>*/}
+
             </View>
         </SafeAreaView>
+
     );
 };
 

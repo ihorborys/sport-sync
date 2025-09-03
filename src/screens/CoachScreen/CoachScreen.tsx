@@ -10,7 +10,7 @@ import Input from "@components/ui/Input/Input";
 import PressableText from "@components/ui/PressableText/PressableText";
 import BaseText from "@components/ui/BaseText/BaseText";
 
-const AuthScreen = () => {
+const CoachScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
 
     return (
@@ -52,4 +52,4 @@ const AuthScreen = () => {
     );
 };
 
-export default AuthScreen;
+export default CoachScreen;
