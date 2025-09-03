@@ -3,15 +3,15 @@ import {useNavigation} from "@react-navigation/native";
 import PrimaryButton from "@components/ui/PrimaryButton/PrimaryButton";
 import Logo from "@components/ui/Logo/Logo";
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
-import {HomeScreenNavigationProp} from "@/src/screens/IntroScreen/types";
 import {styles} from "./styles";
 import React from "react";
 import Input from "@components/ui/Input/Input";
 import PressableText from "@components/ui/PressableText/PressableText";
 import BaseText from "@components/ui/BaseText/BaseText";
+import {AuthScreenNavigationProp} from "@/src/screens/AuthScreen/types";
 
 const AuthScreen = () => {
-    const navigation = useNavigation<HomeScreenNavigationProp>();
+    const navigation = useNavigation<AuthScreenNavigationProp>();
 
     return (
         <SafeAreaView style={styles.safeAreaView}>
