@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingHorizontal: 24,
-        paddingVertical: 96,
+        paddingVertical: 24,
         alignItems: "center",
         backgroundColor: COLORS.background,
 
@@ -34,5 +34,11 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: 'center',
         alignItems: 'center',
-    }
+    },
+    slide: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#eee",
+    },
 });

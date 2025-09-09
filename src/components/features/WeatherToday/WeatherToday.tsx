@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
-import {View, Text, Image} from "react-native";
+import {View, Text, Image, ActivityIndicator} from "react-native";
 import {getWeather} from "@/src/api/api";
 import {styles} from "./styles";
 import {getUserLocation} from "@/src/utils/getUserLocation";
-import {WeatherData} from "@components/features/WeatherSwiper/types";
+import {WeatherData} from "@components/features/WeatherToday/types";
+import {COLORS} from "@/src/constants/colors";
 
-
-const WeatherSwiper = () => {
+const WeatherToday = () => {
     const [data, setData] = useState<WeatherData | null>(null);
 
     useEffect(() => {
@@ -14,14 +14,14 @@ const WeatherSwiper = () => {
             try {
                 const {latitude, longitude} = await getUserLocation();
                 const data = await getWeather(latitude, longitude);
-                setData(data)
+                setData(data);
                 console.log("Weather data:", data);
             } catch (err: any) {
                 console.log("Failed to fetch weather:", err.message);
             }
         }
 
-        fetchWeather().catch(err => {
+        fetchWeather().catch((err) => {
             console.log("Failed to fetch weather:", (err as Error).message);
         });
         console.log("API KEY:", process.env.EXPO_PUBLIC_API_KEY);
@@ -33,19 +33,25 @@ const WeatherSwiper = () => {
                 <>
                     <View style={styles.container}>
                         <Text style={styles.title}>{data.name}</Text>
-                        <Text style={styles.temperature}>{Math.round(data.main.temp - 273.15)}°C</Text>
-                        <Text style={styles.description}>{data.weather[0].description}</Text>
+                        <Text style={styles.temperature}>
+                            {Math.round(data.main.temp)}°C
+                        </Text>
+                        <Text style={styles.description}>
+                            {data.weather[0].description}
+                        </Text>
                         <Image
                             style={{width: 100, height: 100}}
-                            source={{uri: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}}
+                            source={{
+                                uri: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
+                            }}
                         />
                     </View>
                 </>
             ) : (
-                <Text>Loading...</Text>
+                <ActivityIndicator size="large" color={COLORS.grey}/>
             )}
         </View>
     );
 };
 
-export default WeatherSwiper;
+export default WeatherToday;
