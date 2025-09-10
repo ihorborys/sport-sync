@@ -5,5 +5,6 @@ export type TabParamList = {
     CoachTabs: undefined;
     Coach: undefined;
     Athlete: undefined;
-    Profile: { userId: string }; // якщо потрібен userId
+    Profile: { userId: string }; // якщо потрібен userId;
+    CreateGroup: undefined;
 };

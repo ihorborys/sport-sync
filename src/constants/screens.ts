@@ -8,6 +8,7 @@ export const SCREENS = {
     COACHES_TABS: 'CoachesTabs',
     ATHLETE_TABS: 'AthleteTabs',
     HOME: 'Home',
+    CREATE_GROUP: 'CreateGroup',
 } as const;
 
 export type ScreenName = keyof typeof SCREENS;

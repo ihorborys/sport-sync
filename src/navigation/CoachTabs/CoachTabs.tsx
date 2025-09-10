@@ -7,6 +7,7 @@ import CoachScreen from "@/src/screens/CoachScreen/CoachScreen";
 import {bottomTabStyles} from "@/src/navigation/CoachTabs/styles";
 import RolesScreen from "@/src/screens/RolesScreen/RolesScreen";
 import AuthScreen from "@/src/screens/AuthScreen/AuthScreen";
+import CreateGroupScreen from "@/src/screens/CreateGroupScreen/CreateGrouScreen";
 
 const Tab = createBottomTabNavigator<TabParamList>();
 
@@ -17,12 +18,9 @@ const CoachTabs = () => {
                 tabBarLabel: "Home",
                 tabBarIcon: ({color, size}) => TAB_ICONS.Home(color, size)
             }}/>
-            <Tab.Screen name={SCREENS.ROLES} component={RolesScreen} options={{
-                tabBarIcon: ({color, size}) => TAB_ICONS.Roles(color, size)
-            }}/>
-            <Tab.Screen name={SCREENS.AUTH} component={AuthScreen} options={{
-                tabBarLabel: "Auth",
-                tabBarIcon: ({color, size}) => TAB_ICONS.Auth(color, size)
+            <Tab.Screen name={SCREENS.CREATE_GROUP} component={CreateGroupScreen} options={{
+                tabBarLabel: "Create Group",
+                tabBarIcon: ({color, size}) => TAB_ICONS.CreateGroup(color, size)
             }}/>
             <Tab.Screen name={SCREENS.PROFILE} component={ProfileScreen} options={{
                 tabBarLabel: "Profile",
