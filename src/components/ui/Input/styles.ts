@@ -5,7 +5,6 @@ import {COLORS} from "@/src/constants/colors";
 export const styles = StyleSheet.create({
     input: {
         width: "100%",
-        // marginBottom: 16,
         paddingHorizontal: 16,
         paddingVertical: 14,
         borderWidth: 1,

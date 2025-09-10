@@ -40,7 +40,7 @@ const WeatherToday = () => {
                             {data.weather[0].description}
                         </Text>
                         <Image
-                            style={{width: 100, height: 100}}
+                            style={{width: 75, height: 75}}
                             source={{
                                 uri: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
                             }}

@@ -7,9 +7,7 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         paddingVertical: 10,
         paddingHorizontal: 20,
-        // borderWidth: 1,
         borderColor: COLORS.black,
-        fontFamily: "Calibri",
     },
     title: {
         fontSize: 20,

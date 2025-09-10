@@ -4,7 +4,7 @@ import {COLORS} from "@/src/constants/colors";
 
 export const styles = StyleSheet.create({
     title: {
-        // fontFamily: "Inter",
+        fontFamily: "Inter",
         fontSize: 19,
         fontWeight: "300",
         color: COLORS.greyDark,

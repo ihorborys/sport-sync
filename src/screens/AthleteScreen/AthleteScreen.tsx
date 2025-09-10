@@ -5,7 +5,6 @@ import BaseText from "@components/ui/BaseText/BaseText";
 import {styles} from "./styles";
 
 const AthleteScreen = () => {
-    // const navigation = useNavigation<AtleteScreenNavigationProp>();
 
     return (
         <SafeAreaView style={styles.safeAreaView}>

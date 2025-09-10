@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: COLORS.background,
-        height: "20%",
     },
     slideTitle: {
         fontSize: 20,
