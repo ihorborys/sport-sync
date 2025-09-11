@@ -8,40 +8,20 @@ export const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
         paddingHorizontal: 24,
-        paddingVertical: 96,
-        alignItems: "center",
-        backgroundColor: COLORS.background,
-
+        paddingVertical: 24,
     },
-    titleContainer: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        gap: 12,
+    logoContainer: {
+        marginBottom: 50,
     },
-    title: {},
-    subTitle: {},
-    buttonsContainer: {
+    input: {
         width: "100%",
-        flexDirection: "row",
-        alignItems: "center",
-        // justifyContent: "center",
-        // borderWidth: 1.5,
-        // borderColor: "red",
-        gap: 8,
-    },
-    btnStyle: {
-        width: "35%",
-        backgroundColor: COLORS.white,
-        borderWidth: 1.5,
-        borderColor: COLORS.primary,
-    },
-    btnTextStyle: {
-        color: COLORS.primary,
-        fontSize: 17,
-        fontWeight: 600,
-        textAlign: "center",
-        textTransform: "uppercase",
+        borderWidth: 1,
+        padding: 10,
+        marginBottom: 15,
+        marginTop: 40,
+        borderRadius: 8
     }
 });

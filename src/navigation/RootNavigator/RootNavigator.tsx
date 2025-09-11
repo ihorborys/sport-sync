@@ -18,7 +18,6 @@ const RootNavigator = () => {
             <Stack.Screen name={SCREENS.ROLES} component={RolesScreen} options={{title: ""}}/>
             <Stack.Screen name={SCREENS.COACHES_TABS} component={CoachesTabs} options={{title: ""}}/>
             <Stack.Screen name={SCREENS.ATHLETE_TABS} component={AthleteTabs} options={{title: ""}}/>
-            {/*<Stack.Screen name={SCREENS.PROFILE} component={ProfileScreen} options={{title: ""}}/>*/}
         </Stack.Navigator>
     );
 }
