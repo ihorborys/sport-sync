@@ -4,6 +4,6 @@ import groupsReducer from './groupsSlice';
 export const store = configureStore({
     reducer: {
         groups: groupsReducer,
-        devTools: process.env.NODE_ENV !== 'production',
     },
+    devTools: process.env.NODE_ENV !== 'production',
 });
