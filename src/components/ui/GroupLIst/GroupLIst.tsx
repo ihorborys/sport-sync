@@ -1,7 +1,8 @@
 import React from "react";
-import {View, Text, FlatList, StyleSheet} from "react-native";
+import {View, Text, FlatList} from "react-native";
 import {useSelector} from "react-redux";
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
+import {styles} from "./styles";
 
 const GroupsList = () => {
     // @ts-ignore
@@ -31,16 +32,3 @@ const GroupsList = () => {
 };
 
 export default GroupsList;
-
-const styles = StyleSheet.create({
-    container: {flex: 1, padding: 16, backgroundColor: "#fff"},
-    groupItem: {
-        padding: 12,
-        marginVertical: 6,
-        backgroundColor: "#f2f2f2",
-        borderRadius: 8,
-    },
-    groupName: {fontSize: 18, fontWeight: "bold"},
-    playersCount: {fontSize: 14, color: "#666"},
-    emptyText: {fontSize: 16, textAlign: "center", marginTop: 20},
-});
