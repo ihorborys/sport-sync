@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {View, SafeAreaView, Alert} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {addGroup} from '@/src/redux/groupsSlice';
-import {nanoid} from '@reduxjs/toolkit';
 import Logo from "@components/ui/Logo/Logo";
 import {styles} from "./styles"
 import Input from "@components/ui/Input/Input";
@@ -20,7 +19,7 @@ const CreateGroupScreen = ({navigation}) => {
             return;
         }
 
-        dispatch(addGroup({id: nanoid(), name: groupName, players: []}));
+        dispatch(addGroup({name: groupName}));
         setGroupName('');
         navigation.navigate(SCREENS.COACHES_TABS, {screen: SCREENS.COACH}); // повертаємося на головний екран
     };

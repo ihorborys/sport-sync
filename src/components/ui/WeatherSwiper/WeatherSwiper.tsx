@@ -17,16 +17,12 @@ const WeatherSwiper = () => {
                 dotColor={COLORS.grey}           // колір неактивних точок
             >
                 <View style={styles.slide}>
-                    {/*<Text>Погода сьогодні 🌤️</Text>*/}
                     <WeatherToday></WeatherToday>
                 </View>
                 <View style={styles.slide}>
                     <Text style={styles.slideTitle}>Next days 📅</Text>
                     <WeatherForecast></WeatherForecast>
                 </View>
-                {/*<View style={styles.slide}>*/}
-                {/*    <Text>Щось інше ⚡</Text>*/}
-                {/*</View>*/}
             </Swiper>
         </View>
     );

@@ -2,7 +2,7 @@ import React from "react";
 import {SafeAreaView, View} from "react-native";
 import {styles} from "./styles";
 import WeatherSwiper from "@components/ui/WeatherSwiper/WeatherSwiper";
-import GroupsList from "@components/ui/GroupLIst/GroupLIst";
+import GroupsList from "@components/ui/GroupsLIst/GroupsLIst";
 
 
 const CoachScreen = () => {

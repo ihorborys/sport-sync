@@ -5,6 +5,7 @@ import {getUserLocation} from "@/src/utils/getUserLocation";
 import {styles} from "@components/features/WeatherForecast/styles";
 import {ForecastResponse} from "@components/features/WeatherForecast/types";
 import {groupByDay} from "@/src/utils/groupByDay";
+import {COLORS} from "@/src/constants/colors";
 
 
 const WeatherForecast = () => {
@@ -56,7 +57,7 @@ const WeatherForecast = () => {
                     ))}
                 </View>
             ) : (
-                <ActivityIndicator size="large" color="#1e3a8a"/>
+                <ActivityIndicator size="large" color={COLORS.grey}/>
             )}
         </View>
     );

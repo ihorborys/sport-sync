@@ -6,7 +6,7 @@ import {styles} from "./styles";
 
 const GroupsList = () => {
     // @ts-ignore
-    const groups = useSelector((state) => state.groups);
+    const groups = useSelector(state => state.groups.items);
 
     return (
         <View style={styles.container}>
