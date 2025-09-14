@@ -3,6 +3,7 @@ import {View, Text, FlatList} from "react-native";
 import {useSelector} from "react-redux";
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import {styles} from "./styles";
+import GroupCard from "@components/ui/GroupCard/GroupCard";
 
 const GroupsList = () => {
     // @ts-ignore
@@ -17,14 +18,7 @@ const GroupsList = () => {
                 <FlatList
                     data={groups}
                     keyExtractor={(item) => item.id}
-                    renderItem={({item}) => (
-                        <View style={styles.groupItem}>
-                            <Text style={styles.groupName}>{item.name}</Text>
-                            <Text style={styles.playersCount}>
-                                Players: {item.players.length}
-                            </Text>
-                        </View>
-                    )}
+                    renderItem={({item}) => <GroupCard group={item}/>}
                 />
             )}
         </View>
