@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from "react";
-import {View, Text, Image, ActivityIndicator} from "react-native";
+import {View, Text, ActivityIndicator} from "react-native";
 import {getWeatherForecast} from "@/src/api/api";
 import {getUserLocation} from "@/src/utils/getUserLocation";
 import {styles} from "@components/features/WeatherForecast/styles";
 import {ForecastResponse} from "@components/features/WeatherForecast/types";
 import {groupByDay} from "@/src/utils/groupByDay";
 import {COLORS} from "@/src/constants/colors";
+import {weatherIconMap} from "@components/features/WeatherToday/types";
+// @ts-ignore
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 
 const WeatherForecast = () => {
@@ -44,11 +47,10 @@ const WeatherForecast = () => {
                             }}
                         >
                             <Text style={{width: 100}}>{day.date}</Text>
-                            <Image
-                                style={{width: 50, height: 50}}
-                                source={{
-                                    uri: `https://openweathermap.org/img/wn/${day.icon}@2x.png`,
-                                }}
+                            <Icon
+                                name={weatherIconMap[day.icon]}
+                                size={20}
+                                color={COLORS.primaryDark}
                             />
                             <Text style={{marginLeft: 10}}>
                                 {day.avgTemp}°C, {day.description}

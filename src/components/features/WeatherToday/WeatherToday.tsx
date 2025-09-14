@@ -3,8 +3,10 @@ import {View, Text, Image, ActivityIndicator} from "react-native";
 import {getWeather} from "@/src/api/api";
 import {styles} from "./styles";
 import {getUserLocation} from "@/src/utils/getUserLocation";
-import {WeatherData} from "@components/features/WeatherToday/types";
+import {WeatherData, weatherIconMap} from "@components/features/WeatherToday/types";
 import {COLORS} from "@/src/constants/colors";
+// @ts-ignore
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 const WeatherToday = () => {
     const [data, setData] = useState<WeatherData | null>(null);
@@ -39,12 +41,17 @@ const WeatherToday = () => {
                         <Text style={styles.description}>
                             {data.weather[0].description}
                         </Text>
-                        <Image
-                            style={{width: 75, height: 75}}
-                            source={{
-                                uri: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
-                            }}
+                        <Icon
+                            name={weatherIconMap[data.weather[0].icon] || "wb-sunny"}
+                            size={30}
+                            color={COLORS.primaryDark}
                         />
+                        {/*<Image*/}
+                        {/*    style={{width: 75, height: 75}}*/}
+                        {/*    source={{*/}
+                        {/*        uri: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,*/}
+                        {/*    }}*/}
+                        {/*/>*/}
                     </View>
                 </>
             ) : (
