@@ -1,5 +1,5 @@
-import React from "react";
-import {View, Text, TouchableOpacity, Animated} from "react-native";
+import React, {useRef} from "react";
+import {Text, TouchableOpacity, Animated} from "react-native";
 import {Swipeable} from "react-native-gesture-handler";
 import {useDispatch} from "react-redux";
 import {removeGroup} from "@/src/redux/groupsSlice";
@@ -12,6 +12,27 @@ import {COLORS} from "@/src/constants/colors";
 const GroupCard = ({group}) => {
     const dispatch = useDispatch();
 
+    // refs для анімації
+    const scaleY = useRef(new Animated.Value(1)).current; // масштаб по вертикалі
+    const opacity = useRef(new Animated.Value(1)).current; // прозорість
+
+    const handleDelete = () => {
+        Animated.parallel([
+            Animated.timing(opacity, {
+                toValue: 0,
+                duration: 300,
+                useNativeDriver: true, // opacity можна
+            }),
+            Animated.timing(scaleY, {
+                toValue: 0,
+                duration: 300,
+                useNativeDriver: true, // scaleY – transform, теж можна
+            }),
+        ]).start(() => {
+            dispatch(removeGroup(group.id));
+        });
+    };
+
     // @ts-ignore
     const renderRightActions = (progress, dragX) => {
         const scale = dragX.interpolate({
@@ -23,9 +44,9 @@ const GroupCard = ({group}) => {
         return (
             <TouchableOpacity
                 style={styles.deleteBox}
-                onPress={() => dispatch(removeGroup(group.id))}
+                onPress={handleDelete}
             >
-                <Animated.View style={[{transform: [{scale}]}]}>
+                <Animated.View style={{transform: [{scale}]}}>
                     <Icon name="delete" size={24} color={COLORS.white}/>
                 </Animated.View>
             </TouchableOpacity>
@@ -34,12 +55,21 @@ const GroupCard = ({group}) => {
 
     return (
         <Swipeable renderRightActions={renderRightActions}>
-            <View style={styles.groupItem}>
+            <Animated.View
+                style={[
+                    styles.groupItem,
+                    {
+                        transform: [{scaleY}],
+                        opacity,
+                        overflow: "hidden",
+                    },
+                ]}
+            >
                 <Text style={styles.groupName}>{group.name}</Text>
                 <Text style={styles.playersCount}>
                     Players: {group.players.length}
                 </Text>
-            </View>
+            </Animated.View>
         </Swipeable>
     );
 };

@@ -17,6 +17,7 @@ const GroupsList = () => {
             ) : (
                 <FlatList
                     data={groups}
+                    showsVerticalScrollIndicator={false}
                     keyExtractor={(item) => item.id}
                     renderItem={({item}) => <GroupCard group={item}/>}
                 />

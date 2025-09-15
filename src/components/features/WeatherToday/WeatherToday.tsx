@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {View, Text, Image, ActivityIndicator} from "react-native";
+import {View, Text, ActivityIndicator} from "react-native";
 import {getWeather} from "@/src/api/api";
 import {styles} from "./styles";
 import {getUserLocation} from "@/src/utils/getUserLocation";
@@ -42,16 +42,10 @@ const WeatherToday = () => {
                             {data.weather[0].description}
                         </Text>
                         <Icon
-                            name={weatherIconMap[data.weather[0].icon] || "wb-sunny"}
+                            name={weatherIconMap[data.weather[0].icon]}
                             size={30}
                             color={COLORS.primaryDark}
                         />
-                        {/*<Image*/}
-                        {/*    style={{width: 75, height: 75}}*/}
-                        {/*    source={{*/}
-                        {/*        uri: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,*/}
-                        {/*    }}*/}
-                        {/*/>*/}
                     </View>
                 </>
             ) : (

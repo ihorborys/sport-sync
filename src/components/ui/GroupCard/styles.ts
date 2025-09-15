@@ -26,10 +26,10 @@ export const styles = StyleSheet.create({
         borderWidth: 1.5,
         borderColor: COLORS.primary,
     },
-    groupName: {fontSize: 21, fontWeight: "800", color: COLORS.primary},
-    playersCount: {fontSize: 14, color: "#666"},
+    groupName: {fontSize: 21, fontWeight: "800", color: COLORS.primaryDark},
+    playersCount: {fontSize: 14, color: COLORS.greyDark},
     emptyText: {fontSize: 16, textAlign: "center", marginTop: 20},
-    
+
     deleteBox: {
         backgroundColor: COLORS.red,
         justifyContent: "center",
