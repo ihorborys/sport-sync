@@ -3,10 +3,11 @@ import {View, Text, ActivityIndicator} from "react-native";
 import {getWeather} from "@/src/api/api";
 import {styles} from "./styles";
 import {getUserLocation} from "@/src/utils/getUserLocation";
-import {WeatherData, weatherIconMap} from "@components/features/WeatherToday/types";
+import {fortnistoWeatherIconMap, WeatherData} from "@components/features/WeatherToday/types";
 import {COLORS} from "@/src/constants/colors";
 // @ts-ignore
 import Icon from "react-native-vector-icons/MaterialIcons";
+import {Fontisto} from '@expo/vector-icons';
 
 const WeatherToday = () => {
     const [data, setData] = useState<WeatherData | null>(null);
@@ -29,6 +30,8 @@ const WeatherToday = () => {
         console.log("API KEY:", process.env.EXPO_PUBLIC_API_KEY);
     }, []);
 
+    // @ts-ignore
+    // @ts-ignore
     return (
         <View style={styles.container}>
             {data ? (
@@ -38,13 +41,13 @@ const WeatherToday = () => {
                         <Text style={styles.temperature}>
                             {Math.round(data.main.temp)}°C
                         </Text>
-                        <Text style={styles.description}>
-                            {data.weather[0].description}
-                        </Text>
-                        <Icon
-                            name={weatherIconMap[data.weather[0].icon]}
+                        {/*<Text style={styles.description}>*/}
+                        {/*    {data.weather[0].description}*/}
+                        {/*</Text>*/}
+                        <Fontisto
+                            name={fortnistoWeatherIconMap[data.weather[0].icon] as keyof typeof Fontisto.glyphMap}
                             size={30}
-                            color={COLORS.primaryDark}
+                            color={COLORS.primary}
                         />
                     </View>
                 </>

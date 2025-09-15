@@ -6,9 +6,8 @@ import {styles} from "@components/features/WeatherForecast/styles";
 import {ForecastResponse} from "@components/features/WeatherForecast/types";
 import {groupByDay} from "@/src/utils/groupByDay";
 import {COLORS} from "@/src/constants/colors";
-import {weatherIconMap} from "@components/features/WeatherToday/types";
-// @ts-ignore
-import Icon from "react-native-vector-icons/MaterialIcons";
+import {fortnistoWeatherIconMap} from "@components/features/WeatherToday/types";
+import {Fontisto} from "@expo/vector-icons";
 
 
 const WeatherForecast = () => {
@@ -33,6 +32,7 @@ const WeatherForecast = () => {
         console.log("API KEY:", process.env.EXPO_PUBLIC_API_KEY);
     }, []);
 
+    // @ts-ignore
     return (
         <View style={styles.container}>
             {data ? (
@@ -47,13 +47,13 @@ const WeatherForecast = () => {
                             }}
                         >
                             <Text style={{width: 100}}>{day.date}</Text>
-                            <Icon
-                                name={weatherIconMap[day.icon]}
+                            <Fontisto
+                                name={fortnistoWeatherIconMap[day.icon] as keyof typeof Fontisto.glyphMap}
                                 size={20}
-                                color={COLORS.primaryDark}
+                                color={COLORS.primary}
                             />
                             <Text style={{marginLeft: 10}}>
-                                {day.avgTemp}°C, {day.description}
+                                {day.avgTemp}°C
                             </Text>
                         </View>
                     ))}
