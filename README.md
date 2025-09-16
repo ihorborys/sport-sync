@@ -30,3 +30,4 @@ This project is licensed under the [MIT License](LICENSE).
 ![screenshot_tab_navigation.jpeg](assets%2Fimages%2Fscreenshot_tab_navigation.jpeg)
 ![screenshot_api.jpg](assets%2Fimages%2Fscreenshot_api.jpg)
 ![screenshot_redux.jpg](assets%2Fimages%2Fscreenshot_redux.jpg)
+![screenshot_animations.jpeg](assets/images/screenshot_animations.jpeg)
