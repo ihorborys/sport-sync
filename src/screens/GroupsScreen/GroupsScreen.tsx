@@ -6,10 +6,10 @@ import Logo from "@components/ui/Logo/Logo";
 import {styles} from "./styles"
 import Input from "@components/ui/Input/Input";
 import PrimaryButton from "@components/ui/PrimaryButton/PrimaryButton";
-import {SCREENS} from "@/src/constants/screens";
+import GroupsList from "@components/ui/GroupsLIst/GroupsLIst";
 
 // @ts-ignore
-const CreateGroupScreen = ({navigation}) => {
+const CreateGroupScreen = () => {
     const [groupName, setGroupName] = useState('');
     const dispatch = useDispatch();
 
@@ -21,7 +21,6 @@ const CreateGroupScreen = ({navigation}) => {
 
         dispatch(addGroup({name: groupName}));
         setGroupName('');
-        navigation.navigate(SCREENS.COACHES_TABS, {screen: SCREENS.COACH}); // повертаємося на головний екран
     };
 
     return (
@@ -38,6 +37,7 @@ const CreateGroupScreen = ({navigation}) => {
                     title="Create"
                     onPress={handleCreateGroup}/>
             </View>
+            <GroupsList></GroupsList>
         </SafeAreaView>
 
     );

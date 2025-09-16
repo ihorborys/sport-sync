@@ -6,7 +6,7 @@ import {styles} from "@components/features/WeatherForecast/styles";
 import {ForecastResponse} from "@components/features/WeatherForecast/types";
 import {groupByDay} from "@/src/utils/groupByDay";
 import {COLORS} from "@/src/constants/colors";
-import {fortnistoWeatherIconMap} from "@components/features/WeatherToday/types";
+import {fortnistoWeatherIconMap} from "./types";
 import {Fontisto} from "@expo/vector-icons";
 
 
@@ -37,7 +37,7 @@ const WeatherForecast = () => {
         <View style={styles.container}>
             {data ? (
                 <View>
-                    {groupByDay(data.list).slice(1, 4).map((day) => (
+                    {groupByDay(data.list).slice(1, 6).map((day) => (
                         <View
                             key={day.date}
                             style={{
@@ -53,7 +53,7 @@ const WeatherForecast = () => {
                                 color={COLORS.primary}
                             />
                             <Text style={{marginLeft: 10}}>
-                                {day.avgTemp}°C
+                                {day.avgTemp}°C, {day.description}
                             </Text>
                         </View>
                     ))}

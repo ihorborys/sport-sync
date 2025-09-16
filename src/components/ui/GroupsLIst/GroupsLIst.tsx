@@ -11,7 +11,7 @@ const GroupsList = () => {
 
     return (
         <View style={styles.container}>
-            <SectionTitle title={'Your Groups'}></SectionTitle>
+            <SectionTitle title={'Groups'}></SectionTitle>
             {groups.length === 0 ? (
                 <Text style={styles.emptyText}>Sorry, You have no any groups... 🙃</Text>
             ) : (
