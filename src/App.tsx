@@ -2,10 +2,10 @@ import React from "react";
 import {NavigationContainer} from "@react-navigation/native";
 import RootNavigator from "./navigation/RootNavigator/RootNavigator";
 import {Provider} from "react-redux";
-import {persistor, store} from "@/src/redux/store";
+import {persistor, store} from "./redux/store";
 import {PersistGate} from "redux-persist/integration/react";
 import {ActivityIndicator} from "react-native";
-import {COLORS} from "@/src/constants/colors";
+import {COLORS} from "./constants/colors";
 import {GestureHandlerRootView} from "react-native-gesture-handler";
 
 

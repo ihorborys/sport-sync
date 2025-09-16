@@ -1,6 +1,6 @@
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {RootStackParamList} from "@/src/types/RootStackParamList";
-import {stackHeaderStyles} from "@/src/navigation/RootNavigator/styles";
+import {stackHeaderStyles} from "./styles";
 import {SCREENS} from "@/src/constants/screens";
 import AuthScreen from "@/src/screens/AuthScreen/AuthScreen";
 import RolesScreen from "@/src/screens/RolesScreen/RolesScreen";
