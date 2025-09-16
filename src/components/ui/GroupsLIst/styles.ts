@@ -8,5 +8,8 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: COLORS.background,
+    },
+    emptyText: {
+        fontSize: 16,
     }
 });

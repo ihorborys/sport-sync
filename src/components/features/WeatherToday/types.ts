@@ -30,3 +30,41 @@ export const weatherIconMap: Record<string, string> = {
     "50d": "blur_on",       // туман
     "50n": "blur_on",
 };
+
+export const fortnistoWeatherIconMap: Record<string, string> = {
+    // Ясне небо
+    "01d": "day-sunny",
+    "01n": "night-clear",
+
+    // Мало хмар
+    "02d": "cloudy",
+    "02n": "cloudy",
+
+    // Хмарно
+    "03d": "cloudy",
+    "03n": "cloudy",
+
+    // Дуже хмарно
+    "04d": "cloudy-gusts",
+    "04n": "cloudy-gusts",
+
+    // Дощ
+    "09d": "rain",
+    "09n": "rain",
+
+    // Сильний дощ
+    "10d": "rainy",
+    "10n": "rainy",
+
+    // Гроза
+    "11d": "lightning",
+    "11n": "lightning",
+
+    // Сніг
+    "13d": "snow",
+    "13n": "snow",
+
+    // Туман
+    "50d": "fog",
+    "50n": "fog",
+};
