@@ -1,17 +1,19 @@
-import {View} from "react-native";
-import Logo from "@components/ui/Logo/Logo";
 import React from "react";
-import BaseText from "@components/ui/BaseText/BaseText";
+import {View} from "react-native";
 import {styles} from "./styles";
+import WeatherSwiper from "@components/ui/WeatherSwiper/WeatherSwiper";
+import CalendarView from "@components/features/CalendarView/CalendarView";
+
 
 const AthleteScreen = () => {
 
     return (
         <View style={styles.container}>
-            <Logo width={"100"} height={"118"}></Logo>
-            <BaseText>AthleteScreen</BaseText>
+            <WeatherSwiper></WeatherSwiper>
+            <CalendarView></CalendarView>
         </View>
     );
 };
+
 
 export default AthleteScreen;

@@ -3,16 +3,16 @@ import {SCREENS} from "@/src/constants/screens";
 import ProfileScreen from "@/src/screens/ProfileScreen/ProfileScreen";
 import {TAB_ICONS} from "@/src/constants/tabBarIcons";
 import {TabParamList} from "@/src/types/TabParamList";
-import CoachScreen from "@/src/screens/CoachScreen/CoachScreen";
 import {bottomTabStyles} from "@/src/navigation/CoachTabs/styles";
 import GroupScreen from "@/src/screens/GroupsScreen/GroupsScreen";
+import AthleteScreen from "@/src/screens/AthleteScreen/AthleteScreen";
 
 const Tab = createBottomTabNavigator<TabParamList>();
 
 const AthleteTabs = () => {
     return (
         <Tab.Navigator screenOptions={bottomTabStyles}>
-            <Tab.Screen name={SCREENS.COACH} component={CoachScreen} options={{
+            <Tab.Screen name={SCREENS.ATHLETE} component={AthleteScreen} options={{
                 tabBarLabel: "Home",
                 tabBarIcon: ({color, size}) => TAB_ICONS.Home(color, size)
             }}/>

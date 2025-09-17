@@ -35,10 +35,9 @@ const CreateGroupScreen = () => {
                 />
                 <PrimaryButton
                     title="Create"
-
                     onPress={handleCreateGroup}/>
             </View>
-            <GroupsList></GroupsList>
+            <GroupsList style={styles.groupList}></GroupsList>
         </>
 
     );

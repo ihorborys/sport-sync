@@ -10,4 +10,6 @@ export const stackHeaderStyles: NativeStackNavigationOptions = {
         fontWeight: "800",
     },
     headerTitleAlign: "center",
+    headerBackVisible: false, // приховати стандартну кнопку
+
 }

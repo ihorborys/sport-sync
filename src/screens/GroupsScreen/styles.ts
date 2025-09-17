@@ -17,8 +17,5 @@ export const styles = StyleSheet.create({
         marginBottom: 12,
         marginTop: 24,
         borderRadius: 8
-    },
-    groupList: {
-        marginTop: 24,
     }
 });
