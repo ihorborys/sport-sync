@@ -10,15 +10,15 @@ export const styles = StyleSheet.create({
         paddingVertical: 24,
         backgroundColor: COLORS.background,
     },
-    logoContainer: {
-        marginBottom: 50,
-    },
     input: {
         width: "100%",
         borderWidth: 1,
         padding: 10,
-        marginBottom: 15,
-        marginTop: 40,
+        marginBottom: 12,
+        marginTop: 24,
         borderRadius: 8
+    },
+    groupList: {
+        marginTop: 24,
     }
 });
