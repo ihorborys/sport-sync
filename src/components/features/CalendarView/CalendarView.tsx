@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {View, Text} from "react-native";
+import {View} from "react-native";
 import {Calendar} from "react-native-calendars";
 import {COLORS} from "@/src/constants/colors";
 import {styles} from "./styles";
@@ -25,12 +25,6 @@ const CalendarView = () => {
                     arrowColor: COLORS.primary,
                 }}
             />
-
-            {/*{selected ? (*/}
-            {/*    <Text style={styles.text}>Вибрана дата: {selected}</Text>*/}
-            {/*) : (*/}
-            {/*    <Text style={styles.text}>Оберіть дату</Text>*/}
-            {/*)}*/}
         </View>
     );
 };

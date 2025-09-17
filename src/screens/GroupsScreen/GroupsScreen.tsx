@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, SafeAreaView, Alert} from 'react-native';
+import {View, Alert} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {addGroup} from '@/src/redux/groupsSlice';
 import Logo from "@components/ui/Logo/Logo";

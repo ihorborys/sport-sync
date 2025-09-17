@@ -1,4 +1,4 @@
-import {SafeAreaView, View} from "react-native";
+import {View} from "react-native";
 import {useNavigation} from "@react-navigation/native";
 import PrimaryButton from "@components/ui/PrimaryButton/PrimaryButton";
 import Logo from "@components/ui/Logo/Logo";

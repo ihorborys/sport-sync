@@ -1,5 +1,4 @@
-import {SafeAreaView, View} from "react-native";
-
+import {View} from "react-native";
 import {styles} from "./styles";
 import React from "react";
 import BaseText from "@components/ui/BaseText/BaseText";

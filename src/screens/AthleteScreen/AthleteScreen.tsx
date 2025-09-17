@@ -1,4 +1,4 @@
-import {SafeAreaView, View} from "react-native";
+import {View} from "react-native";
 import Logo from "@components/ui/Logo/Logo";
 import React from "react";
 import BaseText from "@components/ui/BaseText/BaseText";
