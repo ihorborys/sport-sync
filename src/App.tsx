@@ -7,6 +7,7 @@ import {PersistGate} from "redux-persist/integration/react";
 import {ActivityIndicator} from "react-native";
 import {COLORS} from "./constants/colors";
 import {GestureHandlerRootView} from "react-native-gesture-handler";
+import {SafeAreaProvider, SafeAreaView} from "react-native-safe-area-context";
 
 
 export default function App() {
@@ -15,9 +16,13 @@ export default function App() {
         <GestureHandlerRootView style={{flex: 1}}>
             <Provider store={store}>
                 <PersistGate loading={<ActivityIndicator size="large" color={COLORS.grey}/>} persistor={persistor}>
-                    <NavigationContainer>
-                        <RootNavigator/>
-                    </NavigationContainer>
+                    <SafeAreaProvider>
+                        <SafeAreaView style={{flex: 1}} edges={["left", "right",]}>
+                            <NavigationContainer>
+                                <RootNavigator/>
+                            </NavigationContainer>
+                        </SafeAreaView>
+                    </SafeAreaProvider>
                 </PersistGate>
             </Provider>
         </GestureHandlerRootView>

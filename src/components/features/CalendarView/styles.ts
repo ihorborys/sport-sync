@@ -3,7 +3,8 @@ import {StyleSheet} from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 50,
+        // marginTop: 50,
+        width: "100%",
     },
     text: {
         textAlign: "center",

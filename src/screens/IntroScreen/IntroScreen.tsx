@@ -12,18 +12,16 @@ const IntroScreen = () => {
 
 
     return (
-        <SafeAreaView style={styles.safeAreaView}>
-            <View style={styles.container}>
-                <Logo width={"200"} height={"236"}></Logo>
-                <View style={styles.titleContainer}>
-                    <SectionTitle title={"Train smarter\nPlay harder\nStay synced"} style={styles.title}></SectionTitle>
-                    <SectionSubtitle
-                        title={"SportSync is a smart app for organizing sports teams, training sessions, and events across any sport."}
-                        style={styles.subTitle}></SectionSubtitle>
-                </View>
-                <PrimaryButton title={"Next"} onPress={() => navigation.navigate("Auth")}></PrimaryButton>
+        <View style={styles.container}>
+            <Logo width={"200"} height={"236"}></Logo>
+            <View style={styles.titleContainer}>
+                <SectionTitle title={"Train smarter\nPlay harder\nStay synced"} style={styles.title}></SectionTitle>
+                <SectionSubtitle
+                    title={"SportSync is a smart app for organizing sports teams, training sessions, and events across any sport."}
+                    style={styles.subTitle}></SectionSubtitle>
             </View>
-        </SafeAreaView>
+            <PrimaryButton title={"Next"} onPress={() => navigation.navigate("Auth")}></PrimaryButton>
+        </View>
     );
 }
 

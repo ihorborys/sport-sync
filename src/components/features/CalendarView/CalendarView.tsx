@@ -10,6 +10,7 @@ const CalendarView = () => {
     return (
         <View style={styles.container}>
             <Calendar
+                // style={{borderWidth: 1, borderColor: COLORS.primary, height: 500}}
                 onDayPress={(day) => {
                     setSelected(day.dateString);
                 }}
@@ -25,11 +26,11 @@ const CalendarView = () => {
                 }}
             />
 
-            {selected ? (
-                <Text style={styles.text}>Вибрана дата: {selected}</Text>
-            ) : (
-                <Text style={styles.text}>Оберіть дату</Text>
-            )}
+            {/*{selected ? (*/}
+            {/*    <Text style={styles.text}>Вибрана дата: {selected}</Text>*/}
+            {/*) : (*/}
+            {/*    <Text style={styles.text}>Оберіть дату</Text>*/}
+            {/*)}*/}
         </View>
     );
 };

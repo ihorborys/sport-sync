@@ -14,41 +14,39 @@ const AuthScreen = () => {
     const navigation = useNavigation<AuthScreenNavigationProp>();
 
     return (
-        <SafeAreaView style={styles.safeAreaView}>
-            <View style={styles.container}>
-                <Logo width={"100"} height={"118"}></Logo>
-                <View style={styles.inputSection}>
-                    <SectionTitle
-                        title={"Welcome!"}
-                        style={styles.title}
-                    ></SectionTitle>
-                    <Input style={styles.input} placeholder={"Email Address"}></Input>
-                    <Input style={styles.input} placeholder={"Password"}></Input>
+        <View style={styles.container}>
+            <Logo width={"100"} height={"118"}></Logo>
+            <View style={styles.inputSection}>
+                <SectionTitle
+                    title={"Welcome!"}
+                    style={styles.title}
+                ></SectionTitle>
+                <Input style={styles.input} placeholder={"Email Address"}></Input>
+                <Input style={styles.input} placeholder={"Password"}></Input>
+                <PressableText
+                    text="Forgot password?"
+                    onPress={() => Alert.alert("Forgot password functionality")}
+                    containerStyle={{width: "100%"}}
+                />
+            </View>
+            <PrimaryButton
+                title={"Login"}
+                onPress={() => navigation.navigate("Roles")}
+            ></PrimaryButton>
+            <View style={styles.socialsSection}>
+
+                <View style={styles.registerText}>
+                    <BaseText>Not a member?</BaseText>
                     <PressableText
-                        text="Forgot password?"
-                        onPress={() => Alert.alert("Forgot password functionality")}
-                        containerStyle={{width: "100%"}}
+                        text="Register now"
+                        onPress={() => Alert.alert("Register now Functionality")}
+                        containerStyle={{paddingLeft: 10}}
                     />
                 </View>
-                <PrimaryButton
-                    title={"Login"}
-                    onPress={() => navigation.navigate("Roles")}
-                ></PrimaryButton>
-                <View style={styles.socialsSection}>
-
-                    <View style={styles.registerText}>
-                        <BaseText>Not a member?</BaseText>
-                        <PressableText
-                            text="Register now"
-                            onPress={() => Alert.alert("Register now Functionality")}
-                            containerStyle={{paddingLeft: 10}}
-                        />
-                    </View>
 
 
-                </View>
             </View>
-        </SafeAreaView>
+        </View>
     );
 };
 

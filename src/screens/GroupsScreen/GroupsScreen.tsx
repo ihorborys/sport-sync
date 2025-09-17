@@ -24,21 +24,20 @@ const CreateGroupScreen = () => {
     };
 
     return (
-        <SafeAreaView style={styles.safeAreaView}>
-            <View style={styles.container}>
-                <Logo width={"100"} height={"118"}></Logo>
-                <Input
-                    placeholder="Group name"
-                    value={groupName}
-                    onChangeText={setGroupName}
-                    style={styles.input}
-                />
-                <PrimaryButton
-                    title="Create"
-                    onPress={handleCreateGroup}/>
-            </View>
+        <View style={styles.container}>
+            <Logo width={"100"} height={"118"}></Logo>
+            <Input
+                placeholder="Group name"
+                value={groupName}
+                onChangeText={setGroupName}
+                style={styles.input}
+            />
+            <PrimaryButton
+                title="Create"
+                onPress={handleCreateGroup}/>
             <GroupsList></GroupsList>
-        </SafeAreaView>
+        </View>
+
 
     );
 };

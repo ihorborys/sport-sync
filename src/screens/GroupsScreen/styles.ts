@@ -2,16 +2,13 @@ import {StyleSheet} from "react-native";
 import {COLORS} from "@/src/constants/colors";
 
 export const styles = StyleSheet.create({
-    safeAreaView: {
-        flex: 1,
-        backgroundColor: COLORS.background,
-    },
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         paddingHorizontal: 24,
         paddingVertical: 24,
+        backgroundColor: COLORS.background,
     },
     logoContainer: {
         marginBottom: 50,
