@@ -5,7 +5,6 @@ import {styles} from "./styles";
 import {getUserLocation} from "@/src/utils/getUserLocation";
 import {fortnistoWeatherIconMap, WeatherData} from "./types";
 import {COLORS} from "@/src/constants/colors";
-
 import {Fontisto} from "@expo/vector-icons";
 
 const WeatherToday = () => {

@@ -8,6 +8,7 @@ import CoachesTabs from "@/src/navigation/CoachTabs/CoachTabs";
 import IntroScreen from "@/src/screens/IntroScreen/IntroScreen";
 import AthleteTabs from "@/src/navigation/AthleteTabs/AthleteTabs";
 import {TouchableOpacity, Text} from 'react-native';
+import {COLORS} from "@/src/constants/colors";
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -23,7 +24,7 @@ const RootNavigator = () => {
                     title: "Authorisation",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()} style={{marginLeft: 16}}>
-                            <Text style={{color: 'white'}}>Back</Text>
+                            <Text style={{color: COLORS.white}}>Back</Text>
                         </TouchableOpacity>
                     )
                 })}
@@ -35,12 +36,12 @@ const RootNavigator = () => {
                     title: "Roles",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()} style={{marginLeft: 16}}>
-                            <Text style={{color: 'white'}}>Back</Text>
+                            <Text style={{color: COLORS.white}}>Back</Text>
                         </TouchableOpacity>
                     ),
                     headerRight: () => (
                         <TouchableOpacity onPress={() => navigation.navigate(SCREENS.AUTH)} style={{marginRight: 16}}>
-                            <Text style={{color: 'white'}}>Auth</Text>
+                            <Text style={{color: COLORS.white}}>Auth</Text>
                         </TouchableOpacity>
                     ),
                 })}
@@ -52,12 +53,12 @@ const RootNavigator = () => {
                     title: "Сoach",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()} style={{marginLeft: 16}}>
-                            <Text style={{color: 'white'}}>Back</Text>
+                            <Text style={{color: COLORS.white}}>Back</Text>
                         </TouchableOpacity>
                     ),
                     headerRight: () => (
                         <TouchableOpacity onPress={() => navigation.navigate(SCREENS.AUTH)} style={{marginRight: 16}}>
-                            <Text style={{color: 'white'}}>Auth</Text>
+                            <Text style={{color: COLORS.white}}>Auth</Text>
                         </TouchableOpacity>
                     ),
                 })}
@@ -69,12 +70,12 @@ const RootNavigator = () => {
                     title: "Athlete",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()} style={{marginLeft: 16}}>
-                            <Text style={{color: 'white'}}>Back</Text>
+                            <Text style={{color: COLORS.white}}>Back</Text>
                         </TouchableOpacity>
                     ),
                     headerRight: () => (
                         <TouchableOpacity onPress={() => navigation.navigate(SCREENS.AUTH)} style={{marginRight: 16}}>
-                            <Text style={{color: 'white'}}>Auth</Text>
+                            <Text style={{color: COLORS.white}}>Auth</Text>
                         </TouchableOpacity>
                     ),
                 })}

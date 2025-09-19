@@ -9,7 +9,7 @@ import PrimaryButton from "@components/ui/PrimaryButton/PrimaryButton";
 import GroupsList from "@components/ui/GroupsLIst/GroupsLIst";
 
 // @ts-ignore
-const CreateGroupScreen = () => {
+const GroupsScreen = () => {
     const [groupName, setGroupName] = useState('');
     const dispatch = useDispatch();
 
@@ -37,10 +37,10 @@ const CreateGroupScreen = () => {
                     title="Create"
                     onPress={handleCreateGroup}/>
             </View>
-            <GroupsList style={styles.groupList}></GroupsList>
+            <GroupsList></GroupsList>
         </>
 
     );
 };
 
-export default CreateGroupScreen;
+export default GroupsScreen;

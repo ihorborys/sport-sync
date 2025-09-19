@@ -3,13 +3,7 @@ import {StyleSheet} from "react-native";
 import {COLORS} from "@/src/constants/colors";
 
 export const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: COLORS.background
-    },
-    groupItem: {
+    groupContainer: {
         width: 200,
         height: 100,
 
@@ -26,6 +20,7 @@ export const styles = StyleSheet.create({
         borderWidth: 1.5,
         borderColor: COLORS.primary,
     },
+    groupItem: {flex: 1, alignItems: "center", justifyContent: "center"},
     groupName: {fontSize: 21, fontWeight: "800", color: COLORS.primary},
     playersCount: {fontSize: 14, color: COLORS.greyDark},
     emptyText: {fontSize: 16, textAlign: "center", marginTop: 20},

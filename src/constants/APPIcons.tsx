@@ -4,7 +4,7 @@ import {Platform} from "react-native";
 
 export type IconRenderer = (color: string, size: number) => React.ReactElement;
 
-export const TAB_ICONS: Record<"Home" | "Groups" | "Profile", IconRenderer> = {
+export const APP_ICONS: Record<"Home" | "Groups" | "Profile", IconRenderer> = {
     Home: (color, size) => Platform.OS === 'ios' ?
         <Ionicons name="home" color={color} size={size}/> :
         <MaterialIcons name="home" color={color} size={size}/>,

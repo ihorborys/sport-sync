@@ -4,8 +4,17 @@ import {useSelector} from "react-redux";
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import {styles} from "./styles";
 import GroupCard from "@components/ui/GroupCard/GroupCard";
+import {useNavigation} from "@react-navigation/native";
+import {SCREENS} from "@/src/constants/screens";
+import {NativeStackNavigationProp} from "@react-navigation/native-stack";
+import {RootStackParamList} from "@/src/types/RootStackParamList";
+
+type GroupsListNavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const GroupsList = () => {
+
+    const navigation = useNavigation<GroupsListNavigationProp>();
+
     // @ts-ignore
     const groups = useSelector(state => state.groups.items);
 
@@ -19,7 +28,11 @@ const GroupsList = () => {
                     data={groups}
                     showsVerticalScrollIndicator={false}
                     keyExtractor={(item) => item.id}
-                    renderItem={({item}) => <GroupCard group={item}/>}
+                    renderItem={({item}) =>
+                        <GroupCard
+                            group={item}
+                            onPress={() => navigation.navigate(SCREENS.GROUP_DETAILS, {groupId: item.id})}
+                        />}
                 />
             )}
         </View>

@@ -7,4 +7,7 @@ export type RootStackParamList = {
     Profile: { userId: string }; // передаємо id користувача
     CoachesTabs: { userId: string }; // передаємо id користувача
     AthleteTabs: { userId: string }; // передаємо id користувача
+    GroupsStack: { userId: string }; // передаємо id користувача
+    Groups: { userId: string }; // передаємо id користувача
+    GroupDetails: { groupId: string }; // передаємо id користувача
 };

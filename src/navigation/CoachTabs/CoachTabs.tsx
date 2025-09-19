@@ -1,28 +1,28 @@
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {SCREENS} from "@/src/constants/screens";
 import ProfileScreen from "@/src/screens/ProfileScreen/ProfileScreen";
-import {TAB_ICONS} from "@/src/constants/tabBarIcons";
-import {TabParamList} from "@/src/types/TabParamList";
+import {APP_ICONS} from "@/src/constants/APPIcons";
+import {RootStackParamList} from "@/src/types/RootStackParamList";
 import CoachScreen from "@/src/screens/CoachScreen/CoachScreen";
 import {bottomTabStyles} from "@/src/navigation/CoachTabs/styles";
-import GroupScreen from "@/src/screens/GroupsScreen/GroupsScreen";
+import GroupsStack from "@/src/navigation/GroupsStack/GroupStack";
 
-const Tab = createBottomTabNavigator<TabParamList>();
+const Tab = createBottomTabNavigator<RootStackParamList>();
 
 const CoachTabs = () => {
     return (
         <Tab.Navigator screenOptions={bottomTabStyles}>
             <Tab.Screen name={SCREENS.COACH} component={CoachScreen} options={{
                 tabBarLabel: "Home",
-                tabBarIcon: ({color, size}) => TAB_ICONS.Home(color, size)
+                tabBarIcon: ({color, size}) => APP_ICONS.Home(color, size)
             }}/>
-            <Tab.Screen name={SCREENS.GROUPS} component={GroupScreen} options={{
+            <Tab.Screen name={SCREENS.GROUPS} component={GroupsStack} options={{
                 tabBarLabel: "Groups",
-                tabBarIcon: ({color, size}) => TAB_ICONS.Groups(color, size)
+                tabBarIcon: ({color, size}) => APP_ICONS.Groups(color, size)
             }}/>
             <Tab.Screen name={SCREENS.PROFILE} component={ProfileScreen} options={{
                 tabBarLabel: "Profile",
-                tabBarIcon: ({color, size}) => TAB_ICONS.Profile(color, size)
+                tabBarIcon: ({color, size}) => APP_ICONS.Profile(color, size)
             }}/>
         </Tab.Navigator>
     );
