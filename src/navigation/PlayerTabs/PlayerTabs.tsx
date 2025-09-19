@@ -5,14 +5,14 @@ import {APP_ICONS} from "@/src/constants/APPIcons";
 import {RootStackParamList} from "@/src/types/RootStackParamList";
 import {bottomTabStyles} from "@/src/navigation/CoachTabs/styles";
 import GroupScreen from "@/src/screens/GroupsScreen/GroupsScreen";
-import AthleteScreen from "@/src/screens/AthleteScreen/AthleteScreen";
+import PlayerScreen from "@/src/screens/PlayerScreen/PlayerScreen";
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
-const AthleteTabs = () => {
+const PlayerTabs = () => {
     return (
         <Tab.Navigator screenOptions={bottomTabStyles}>
-            <Tab.Screen name={SCREENS.ATHLETE} component={AthleteScreen} options={{
+            <Tab.Screen name={SCREENS.PLAYER} component={PlayerScreen} options={{
                 tabBarLabel: "Home",
                 tabBarIcon: ({color, size}) => APP_ICONS.Home(color, size)
             }}/>
@@ -28,4 +28,4 @@ const AthleteTabs = () => {
     );
 }
 
-export default AthleteTabs;
+export default PlayerTabs;

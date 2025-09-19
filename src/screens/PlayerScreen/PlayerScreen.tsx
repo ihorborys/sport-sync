@@ -5,7 +5,7 @@ import WeatherSwiper from "@components/ui/WeatherSwiper/WeatherSwiper";
 import CalendarView from "@components/features/CalendarView/CalendarView";
 
 
-const AthleteScreen = () => {
+const PlayerScreen = () => {
 
     return (
         <View style={styles.container}>
@@ -16,4 +16,4 @@ const AthleteScreen = () => {
 };
 
 
-export default AthleteScreen;
+export default PlayerScreen;

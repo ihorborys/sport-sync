@@ -30,14 +30,14 @@ const RolesScreen = () => {
                         buttonStyle={styles.btnStyle}
                         textStyle={styles.btnTextStyle}
                         title={"coach"}
-                        onPress={() => navigation.navigate("CoachesTabs", {userId: "1"})
+                        onPress={() => navigation.navigate("CoachTabs", {userId: "1"})
                         }
                     ></PrimaryButton>
                     <PrimaryButton
                         buttonStyle={styles.btnStyle}
                         textStyle={styles.btnTextStyle}
-                        title={"athlete"}
-                        onPress={() => navigation.navigate("AthleteTabs", {userId: "2"})}
+                        title={"player"}
+                        onPress={() => navigation.navigate("PlayerTabs", {userId: "2"})}
                     ></PrimaryButton>
                 </View>
             </View>

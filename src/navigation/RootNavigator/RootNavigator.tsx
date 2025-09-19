@@ -4,9 +4,9 @@ import {stackHeaderStyles} from "./styles";
 import {SCREENS} from "@/src/constants/screens";
 import AuthScreen from "@/src/screens/AuthScreen/AuthScreen";
 import RolesScreen from "@/src/screens/RolesScreen/RolesScreen";
-import CoachesTabs from "@/src/navigation/CoachTabs/CoachTabs";
+import CoachTabs from "@/src/navigation/CoachTabs/CoachTabs";
 import IntroScreen from "@/src/screens/IntroScreen/IntroScreen";
-import AthleteTabs from "@/src/navigation/AthleteTabs/AthleteTabs";
+import PlayerTabs from "@/src/navigation/PlayerTabs/PlayerTabs";
 import {TouchableOpacity, Text} from 'react-native';
 import {COLORS} from "@/src/constants/colors";
 
@@ -47,8 +47,8 @@ const RootNavigator = () => {
                 })}
             />
             <Stack.Screen
-                name={SCREENS.COACHES_TABS}
-                component={CoachesTabs}
+                name={SCREENS.COACH_TABS}
+                component={CoachTabs}
                 options={({navigation}) => ({
                     title: "Сoach",
                     headerLeft: () => (
@@ -64,10 +64,10 @@ const RootNavigator = () => {
                 })}
             />
             <Stack.Screen
-                name={SCREENS.ATHLETE_TABS}
-                component={AthleteTabs}
+                name={SCREENS.PLAYER_TABS}
+                component={PlayerTabs}
                 options={({navigation}) => ({
-                    title: "Athlete",
+                    title: "Player",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()} style={{marginLeft: 16}}>
                             <Text style={{color: COLORS.white}}>Back</Text>
