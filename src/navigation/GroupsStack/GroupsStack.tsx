@@ -3,19 +3,22 @@ import {RootStackParamList} from "@/src/types/RootStackParamList";
 import {SCREENS} from "@/src/constants/screens";
 import GroupDetailsScreen from "@/src/screens/GroupDetailsScreen/GroupDetailsScreen";
 import GroupsScreen from "@/src/screens/GroupsScreen/GroupsScreen";
+import {GroupsStackHeaderStyles} from "./styles";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const GroupsStack = () => (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{...GroupsStackHeaderStyles, headerShown: true}}>
         <Stack.Screen
             name={SCREENS.GROUPS}
             component={GroupsScreen}
+            options={{title: "", headerShown: false}}
+
         />
         <Stack.Screen
             name={SCREENS.GROUP_DETAILS}
             component={GroupDetailsScreen}
-            options={{title: "Group Details"}}
+            options={{title: ""}}
         />
     </Stack.Navigator>
 );

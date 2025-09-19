@@ -53,7 +53,7 @@ const RootNavigator = () => {
                     title: "Сoach",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()} style={{marginLeft: 16}}>
-                            <Text style={{color: COLORS.white}}>Back</Text>
+                            <Text style={{color: COLORS.white}}>Roles</Text>
                         </TouchableOpacity>
                     ),
                     headerRight: () => (

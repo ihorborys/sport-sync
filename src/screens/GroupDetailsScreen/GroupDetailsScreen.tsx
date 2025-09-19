@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {View, Text, TextInput, Button, FlatList} from "react-native";
 import {useSelector, useDispatch} from "react-redux";
+import {COLORS} from "@/src/constants/colors";
 
 // @ts-ignore
 const GroupDetailsScreen = ({route}) => {
@@ -18,7 +19,7 @@ const GroupDetailsScreen = ({route}) => {
     };
 
     return (
-        <View style={{flex: 1, padding: 16}}>
+        <View style={{flex: 1, padding: 16, backgroundColor: COLORS.background}}>
             <Text style={{fontSize: 20, fontWeight: "bold"}}>{group.name}</Text>
 
             <TextInput

@@ -5,7 +5,7 @@ import {APP_ICONS} from "@/src/constants/APPIcons";
 import {RootStackParamList} from "@/src/types/RootStackParamList";
 import CoachScreen from "@/src/screens/CoachScreen/CoachScreen";
 import {bottomTabStyles} from "@/src/navigation/CoachTabs/styles";
-import GroupsStack from "@/src/navigation/GroupsStack/GroupStack";
+import GroupsStack from "@/src/navigation/GroupsStack/GroupsStack";
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
