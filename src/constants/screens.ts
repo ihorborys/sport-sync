@@ -9,6 +9,7 @@ export const SCREENS = {
     PLAYER_TABS: 'PlayerTabs',
     HOME: 'Home',
     GROUPS: 'Groups',
+    GROUPS_STACK: 'GroupsStack',
     GROUP_DETAILS: 'GroupDetails',
 } as const;
 

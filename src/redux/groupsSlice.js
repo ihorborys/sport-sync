@@ -1,11 +1,11 @@
-import {createSlice, nanoid} from '@reduxjs/toolkit';
+import {createSlice, nanoid} from "@reduxjs/toolkit";
 
 const initialState = {
     items: [],
 };
 
 const groupsSlice = createSlice({
-    name: 'groups',
+    name: "groups",
     initialState,
     reducers: {
         // створити нову групу
@@ -13,35 +13,35 @@ const groupsSlice = createSlice({
             reducer: (state, action) => {
                 state.items.push(action.payload);
             },
-            prepare: (group) => {
-                // якщо не передав id — створимо автоматично
-                return {payload: {id: nanoid(), players: [], ...group}};
-            },
+            prepare: (group) => ({
+                payload: {id: nanoid(), players: [], ...group},
+            }),
         },
 
         // видалити групу
         removeGroup: (state, action) => {
-            state.items = state.items.filter(group => group.id !== action.payload);
+            state.items = state.items.filter((group) => group.id !== action.payload);
         },
 
         // додати гравця в групу
-        addPlayerToGroup: (state, action) => {
-            const {groupId, player} = action.payload;
-            const group = state.items.find(g => g.id === groupId);
+        addPlayer: (state, action) => {
+            const {groupId, playerName} = action.payload;
+            const group = state.items.find((g) => g.id === groupId);
             if (group) {
-                group.players.push(player);
+                group.players.push({id: nanoid(), name: playerName});
             }
         },
 
         // видалити гравця з групи
-        removePlayerFromGroup: (state, action) => {
+        removePlayer: (state, action) => {
             const {groupId, playerId} = action.payload;
-            const group = state.items.find(g => g.id === groupId);
+            const group = state.items.find((g) => g.id === groupId);
             if (group) {
-                group.players = group.players.filter(p => p.id !== playerId);
+                group.players = group.players.filter((p) => p.id !== playerId);
             }
         },
-        // resetState
+
+        // скинути state
         resetState: () => initialState,
     },
 });
@@ -49,9 +49,11 @@ const groupsSlice = createSlice({
 export const {
     addGroup,
     removeGroup,
-    addPlayerToGroup,
-    removePlayerFromGroup,
-    resetState,
-} = groupsSlice.actions;
+    addPlayer,
+    removePlayer,
+    resetState
+} =
+    groupsSlice.actions;
 
 export default groupsSlice.reducer;
+

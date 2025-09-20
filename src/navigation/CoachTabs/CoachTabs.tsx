@@ -16,7 +16,7 @@ const CoachTabs = () => {
                 tabBarLabel: "Home",
                 tabBarIcon: ({color, size}) => APP_ICONS.Home(color, size)
             }}/>
-            <Tab.Screen name={SCREENS.GROUPS} component={GroupsStack} options={{
+            <Tab.Screen name={SCREENS.GROUPS_STACK} component={GroupsStack} options={{
                 tabBarLabel: "Groups",
                 tabBarIcon: ({color, size}) => APP_ICONS.Groups(color, size)
             }}/>

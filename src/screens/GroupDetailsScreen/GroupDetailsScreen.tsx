@@ -1,39 +1,43 @@
 import React, {useState} from "react";
-import {View, Text, TextInput, Button, FlatList} from "react-native";
+import {View, FlatList} from "react-native";
 import {useSelector, useDispatch} from "react-redux";
-import {COLORS} from "@/src/constants/colors";
+import PrimaryButton from "@/src/components/ui/PrimaryButton/PrimaryButton";
+import Input from "@components/ui/Input/Input";
+import {styles} from "./styles";
+import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
+import PlayerCard from "@components/ui/PlayerCard/PlayerCard";
+import {addPlayer} from "@/src/redux/groupsSlice";
 
 // @ts-ignore
 const GroupDetailsScreen = ({route}) => {
     const {groupId} = route.params;
     // @ts-ignore
     const group = useSelector(state => state.groups.items.find(g => g.id === groupId));
-
     const [playerName, setPlayerName] = useState("");
     const dispatch = useDispatch();
 
-    const addPlayer = () => {
+    const handleAddPlayer = () => {
         if (!playerName) return;
-        dispatch({type: "groups/addPlayer", payload: {groupId, playerName}});
+        dispatch(addPlayer({groupId, playerName}));
         setPlayerName("");
     };
 
     return (
-        <View style={{flex: 1, padding: 16, backgroundColor: COLORS.background}}>
-            <Text style={{fontSize: 20, fontWeight: "bold"}}>{group.name}</Text>
+        <View style={styles.container}>
+            <SectionTitle title={group.name}/>
 
-            <TextInput
+            <Input
                 placeholder="Enter player name"
                 value={playerName}
                 onChangeText={setPlayerName}
-                style={{borderWidth: 1, borderColor: "#ccc", padding: 8, marginVertical: 10}}
+                style={styles.input}
             />
-            <Button title="Add Player" onPress={addPlayer}/>
+            <PrimaryButton title="Add Player" onPress={handleAddPlayer}/>
 
             <FlatList
-                data={group.players}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={({item}) => <Text>- {item}</Text>}
+                data={group.players} // group.players: Player[]
+                keyExtractor={(item) => item.id}
+                renderItem={({item}) => <PlayerCard groupId={group.id} player={item}/>}
                 style={{marginTop: 16}}
             />
         </View>
@@ -41,3 +45,4 @@ const GroupDetailsScreen = ({route}) => {
 };
 
 export default GroupDetailsScreen;
+
