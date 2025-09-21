@@ -4,14 +4,14 @@ import React from "react";
 import BaseText from "@components/ui/BaseText/BaseText";
 import Logo from "@components/ui/Logo/Logo";
 
-const ProfileScreen = () => {
+const TeamScreen = () => {
 
     return (
         <View style={styles.container}>
             <Logo width={"100"} height={"118"}></Logo>
-            <BaseText>Profile Screen</BaseText>
+            <BaseText>Team Screen</BaseText>
         </View>
     );
 };
 
-export default ProfileScreen;
+export default TeamScreen;

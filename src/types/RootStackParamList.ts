@@ -10,4 +10,5 @@ export type RootStackParamList = {
     GroupsStack: { userId: string }; // передаємо id користувача
     Groups: { userId: string }; // передаємо id користувача
     GroupDetails: { groupId: string }; // передаємо id користувача
+    MyGroup: { groupId: string }; // передаємо id користувача
 };

@@ -5,6 +5,7 @@ import {APP_ICONS} from "@/src/constants/APPIcons";
 import {RootStackParamList} from "@/src/types/RootStackParamList";
 import {bottomTabStyles} from "./styles";
 import PlayerScreen from "@/src/screens/PlayerScreen/PlayerScreen";
+import TeamScreen from "@/src/screens/TeamScreen/TeamScreen";
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
@@ -14,6 +15,10 @@ const PlayerTabs = () => {
             <Tab.Screen name={SCREENS.PLAYER} component={PlayerScreen} options={{
                 tabBarLabel: "Home",
                 tabBarIcon: ({color, size}) => APP_ICONS.Home(color, size)
+            }}/>
+            <Tab.Screen name={SCREENS.MY_GROUP} component={TeamScreen} options={{
+                tabBarLabel: "Team",
+                tabBarIcon: ({color, size}) => APP_ICONS.Team(color, size)
             }}/>
             <Tab.Screen name={SCREENS.PROFILE} component={ProfileScreen} options={{
                 tabBarLabel: "Profile",

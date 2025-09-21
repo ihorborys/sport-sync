@@ -11,6 +11,7 @@ export const SCREENS = {
     GROUPS: 'Groups',
     GROUPS_STACK: 'GroupsStack',
     GROUP_DETAILS: 'GroupDetails',
+    MY_GROUP: 'MyGroup',
 } as const;
 
 export type ScreenName = keyof typeof SCREENS;

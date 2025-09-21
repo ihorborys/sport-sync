@@ -4,13 +4,16 @@ import {Platform} from "react-native";
 
 export type IconRenderer = (color: string, size: number) => React.ReactElement;
 
-export const APP_ICONS: Record<"Home" | "Groups" | "Profile" | "Back" | "Roles" | "Auth", IconRenderer> = {
+export const APP_ICONS: Record<"Home" | "Groups" | "Team" | "Profile" | "Back" | "Roles" | "Auth", IconRenderer> = {
     Home: (color, size) => Platform.OS === 'ios' ?
         <Ionicons name="home" color={color} size={size}/> :
         <MaterialIcons name="home" color={color} size={size}/>,
     Groups: (color, size) => Platform.OS === 'ios' ?
         <Ionicons name="create" color={color} size={size}/> :
         <MaterialIcons name="group-add" color={color} size={size}/>,
+    Team: (color, size) => Platform.OS === 'ios' ?
+        <Ionicons name="people-circle-outline" color={color} size={size}/> :
+        <MaterialIcons name="diversity-3" color={color} size={size}/>,
     Profile: (color, size) => Platform.OS === 'ios' ?
         <Ionicons name="person" color={color} size={size}/> :
         <MaterialIcons name="person" color={color} size={size}/>,
