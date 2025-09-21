@@ -4,7 +4,6 @@ import {Swipeable} from "react-native-gesture-handler";
 import {useDispatch} from "react-redux";
 import {removeGroup} from "@/src/redux/groupsSlice";
 import {styles} from "./styles";
-// @ts-ignore
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {COLORS} from "@/src/constants/colors";
 

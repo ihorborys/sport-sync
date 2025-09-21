@@ -1,5 +1,5 @@
 import {Text, View} from "react-native";
-import {styles} from "@/src/screens/CoachScreen/styles";
+import {styles} from "./styles";
 import Swiper from "react-native-swiper";
 import React from "react";
 import {COLORS} from "@/src/constants/colors";

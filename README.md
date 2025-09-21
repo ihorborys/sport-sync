@@ -7,7 +7,7 @@
 - Track attendance of athletes in different sections.
 - Manage payments and payment history.
 - Generate reports on attendance and finances.
-- User-friendly interface for coaches and administrators.
+- User-friendly interface for coaches and players.
 
 ## Tech Stack
 

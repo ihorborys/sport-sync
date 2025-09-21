@@ -10,7 +10,6 @@ const CalendarView = () => {
     return (
         <View style={styles.container}>
             <Calendar
-                // style={{borderWidth: 1, borderColor: COLORS.primary, height: 500}}
                 onDayPress={(day) => {
                     setSelected(day.dateString);
                 }}

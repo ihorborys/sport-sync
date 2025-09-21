@@ -8,7 +8,6 @@ import Input from "@components/ui/Input/Input";
 import PrimaryButton from "@components/ui/PrimaryButton/PrimaryButton";
 import GroupsList from "@components/ui/GroupsLIst/GroupsLIst";
 
-// @ts-ignore
 const GroupsScreen = () => {
     const [groupName, setGroupName] = useState('');
     const dispatch = useDispatch();

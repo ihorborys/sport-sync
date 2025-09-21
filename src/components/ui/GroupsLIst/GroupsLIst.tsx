@@ -15,8 +15,7 @@ const GroupsList = () => {
 
     const navigation = useNavigation<GroupsListNavigationProp>();
 
-    // @ts-ignore
-    const groups = useSelector(state => state.groups.items);
+    const groups = useSelector((state: any) => state.groups.items);
 
     return (
         <View style={styles.container}>

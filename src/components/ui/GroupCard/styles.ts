@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
     },
     deleteText: {
-        color: "#fff",
+        color: COLORS.white,
         fontWeight: "bold",
         fontSize: 16,
     },

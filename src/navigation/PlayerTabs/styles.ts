@@ -7,7 +7,6 @@ export const bottomTabStyles: BottomTabNavigationOptions = {
     tabBarInactiveTintColor: COLORS.black,
     tabBarStyle: {
         backgroundColor: COLORS.primary,
-        // height: "15%",
         borderTopWidth: 0.5,
         borderTopColor: COLORS.primaryDark,
     },

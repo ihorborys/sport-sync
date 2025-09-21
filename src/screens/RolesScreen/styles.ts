@@ -22,9 +22,6 @@ export const styles = StyleSheet.create({
         width: "100%",
         flexDirection: "row",
         alignItems: "center",
-        // justifyContent: "center",
-        // borderWidth: 1.5,
-        // borderColor: "red",
         gap: 8,
     },
     btnStyle: {

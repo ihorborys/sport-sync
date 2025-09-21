@@ -32,7 +32,6 @@ const WeatherForecast = () => {
         console.log("API KEY:", process.env.EXPO_PUBLIC_API_KEY);
     }, []);
 
-    // @ts-ignore
     return (
         <View style={styles.container}>
             {data ? (
