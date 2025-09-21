@@ -26,8 +26,19 @@
 
 This project is licensed under the [MIT License](LICENSE).
 
-![screenshot_components.jpeg](assets%2Fimages%2Fscreenshot_components.jpeg)
-![screenshot_tab_navigation.jpeg](assets%2Fimages%2Fscreenshot_tab_navigation.jpeg)
-![screenshot_api.jpg](assets%2Fimages%2Fscreenshot_api.jpg)
-![screenshot_redux.jpg](assets%2Fimages%2Fscreenshot_redux.jpg)
-![screenshot_animations.jpeg](assets/images/screenshot_animations.jpeg)
+## Screenshots
+
+![final_screenshot_1.jpg](assets/images/final_screenshot_1.jpg)
+![final_screenshot_2.jpg](assets/images/final_screenshot_2.jpg)
+![final_screenshot_3.jpg](assets/images/final_screenshot_3.jpg)
+![final_screenshot_4.jpg](assets/images/final_screenshot_4.jpg)
+![final_screenshot_5.jpg](assets/images/final_screenshot_5.jpg)
+![final_screenshot_6.jpg](assets/images/final_screenshot_6.jpg)
+![final_screenshot_7.jpg](assets/images/final_screenshot_7.jpg)
+![final_screenshot_8.jpg](assets/images/final_screenshot_8.jpg)
+![final_screenshot_9.jpg](assets/images/final_screenshot_9.jpg)
+![final_screenshot_10.jpg](assets/images/final_screenshot_10.jpg)
+![final_screenshot_11.jpg](assets/images/final_screenshot_11.jpg)
+![final_screenshot_12.jpg](assets/images/final_screenshot_12.jpg)
+![final_screenshot_13.jpg](assets/images/final_screenshot_13.jpg)
+![final_screenshot_14.jpg](assets/images/final_screenshot_14.jpg)

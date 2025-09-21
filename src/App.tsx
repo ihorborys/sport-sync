@@ -8,7 +8,6 @@ import {ActivityIndicator} from "react-native";
 import {COLORS} from "./constants/colors";
 import {GestureHandlerRootView} from "react-native-gesture-handler";
 import {SafeAreaProvider, SafeAreaView} from "react-native-safe-area-context";
-import DebugState from "@components/DebugState";
 
 
 export default function App() {
@@ -21,7 +20,6 @@ export default function App() {
                         <SafeAreaView style={{flex: 1}} edges={["left", "right",]}>
                             <NavigationContainer>
                                 <RootNavigator/>
-                                <DebugState></DebugState>
                             </NavigationContainer>
                         </SafeAreaView>
                     </SafeAreaProvider>
