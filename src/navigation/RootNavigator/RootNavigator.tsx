@@ -9,6 +9,7 @@ import IntroScreen from "@/src/screens/IntroScreen/IntroScreen";
 import PlayerTabs from "@/src/navigation/PlayerTabs/PlayerTabs";
 import {TouchableOpacity, Text} from 'react-native';
 import {COLORS} from "@/src/constants/colors";
+import {APP_ICONS} from "@/src/constants/APPIcons";
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -24,9 +25,9 @@ const RootNavigator = () => {
                     title: "Authorisation",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()} style={{marginLeft: 16}}>
-                            <Text style={{color: COLORS.white}}>Back</Text>
+                            {APP_ICONS.Back(COLORS.white, 22)}
                         </TouchableOpacity>
-                    )
+                    ),
                 })}
             />
             <Stack.Screen
@@ -36,14 +37,14 @@ const RootNavigator = () => {
                     title: "Roles",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()} style={{marginLeft: 16}}>
-                            <Text style={{color: COLORS.white}}>Back</Text>
+                            {APP_ICONS.Back(COLORS.white, 22)}
                         </TouchableOpacity>
                     ),
-                    headerRight: () => (
-                        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.AUTH)} style={{marginRight: 16}}>
-                            <Text style={{color: COLORS.white}}>Auth</Text>
-                        </TouchableOpacity>
-                    ),
+                    // headerRight: () => (
+                    //     <TouchableOpacity onPress={() => navigation.navigate(SCREENS.AUTH)} style={{marginRight: 16}}>
+                    //         <Text style={{color: COLORS.white}}>Auth</Text>
+                    //     </TouchableOpacity>
+                    // ),
                 })}
             />
             <Stack.Screen
@@ -53,12 +54,14 @@ const RootNavigator = () => {
                     title: "Сoach",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()} style={{marginLeft: 16}}>
-                            <Text style={{color: COLORS.white}}>Roles</Text>
+                            {APP_ICONS.Roles(COLORS.white, 22)}
+                            <Text style={{color: COLORS.white, fontSize: 10}}>Roles</Text>
                         </TouchableOpacity>
                     ),
                     headerRight: () => (
                         <TouchableOpacity onPress={() => navigation.navigate(SCREENS.AUTH)} style={{marginRight: 16}}>
-                            <Text style={{color: COLORS.white}}>Auth</Text>
+                            {APP_ICONS.Auth(COLORS.white, 22)}
+                            <Text style={{color: COLORS.white, fontSize: 10}}>Auth</Text>
                         </TouchableOpacity>
                     ),
                 })}
@@ -70,12 +73,14 @@ const RootNavigator = () => {
                     title: "Player",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()} style={{marginLeft: 16}}>
-                            <Text style={{color: COLORS.white}}>Back</Text>
+                            {APP_ICONS.Roles(COLORS.white, 22)}
+                            <Text style={{color: COLORS.white, fontSize: 10}}>Roles</Text>
                         </TouchableOpacity>
                     ),
                     headerRight: () => (
                         <TouchableOpacity onPress={() => navigation.navigate(SCREENS.AUTH)} style={{marginRight: 16}}>
-                            <Text style={{color: COLORS.white}}>Auth</Text>
+                            {APP_ICONS.Auth(COLORS.white, 22)}
+                            <Text style={{color: COLORS.white, fontSize: 10}}>Auth</Text>
                         </TouchableOpacity>
                     ),
                 })}
